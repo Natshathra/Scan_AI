@@ -1,0 +1,8 @@
+streamlit
+streamlit-webrtc
+pytesseract
+pdf2image
+opencv-python
+openpyxl
+Pillow
+reportlab
