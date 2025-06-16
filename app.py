@@ -1,4 +1,6 @@
 import streamlit as st
+from utils.file_utils import convert_to_pdf, convert_to_excel
+
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 import pytesseract
 from PIL import Image
