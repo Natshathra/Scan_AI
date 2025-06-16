@@ -1,6 +1,8 @@
 from PIL import Image
 import pytesseract
 
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+
 def extract_text_from_image(img: Image.Image) -> str:
     gray_img = img.convert('L')
     return pytesseract.image_to_string(gray_img)
