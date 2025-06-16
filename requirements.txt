@@ -6,3 +6,14 @@ opencv-python
 openpyxl
 Pillow
 reportlab
+
+streamlit
+pytesseract
+Pillow
+pdf2image
+openpyxl
+reportlab
+transformers
+torch
+opencv-python
+streamlit-webrtc
