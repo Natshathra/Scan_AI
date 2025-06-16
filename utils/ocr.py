@@ -1,18 +1,12 @@
 import pytesseract
 pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
-import pytesseract
-from PIL import Image
+
 import cv2
-
-
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
+import numpy as np
 from PIL import Image
-import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
-
-def extract_text_from_image(img: Image.Image) -> str:
-    gray_img = img.convert('L')
-    return pytesseract.image_to_string(gray_img)
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+def extract_text_from_image(image):
+    img_array = np.array(image)
+    gray_img = cv2.cvtColor(img_array, cv2.COLOR_BGR2GRAY)
+    text = pytesseract.image_to_string(gray_img)
+    return text
