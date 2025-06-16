@@ -56,7 +56,8 @@ class CameraProcessor(VideoTransformerBase):
         return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 camera_placeholder = st.empty()
-camera_result = webrtc_streamer(key="camera", video_transformer_factory=CameraProcessor)
+camera_result = webrtc_streamer(key="camera", video_processor_factory=CameraProcessor)
+
 
 st.markdown("""
 <small style='color:gray;'>You can take a screenshot from your mobile or laptop while using the live camera to capture documents.</small>
